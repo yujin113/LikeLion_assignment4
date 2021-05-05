@@ -1,5 +1,79 @@
-<h1>Lotto selector</h1>
-
-<p>숫자를 추첨해봅시다!</p>
-
-<a href="{% url 'result' %}"><button type="button">추첨하기</button></a>
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <title>짝궁 뽑기</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        text-align: center;
+        background-color: rgb(255, 246, 196);
+        font-family: Jua;
+      }
+      h1 {
+        line-height: 2em;
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+      button {
+        font-size: 2em;
+        padding: 7px;
+        border: 4px solid rgb(253, 191, 21);
+        border-radius: 10px;
+        background-color: rgb(253, 191, 21);
+        color: white;
+      }
+      button:hover {
+        background-color: rgb(255, 166, 0);
+        border: 4px solid rgb(255, 166, 0);
+      }
+      #ques {
+        font-size: 2.3em;
+        font-family: "Cute Font";
+      }
+      img {
+        position: relative;
+        left: 30px;
+        top: 35px;
+      }
+      hr {
+        width: 90%;
+        height: 4px;
+        border: 0;
+        background-color: rgb(255, 255, 236);
+      }
+      footer {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      짝궁 구하기<img
+        src="https://image.flaticon.com/icons/png/128/2058/2058208.png"
+        width="100"
+        height="100"
+      />
+    </h1>
+    <p id="ques">9기 멋사 인원들 중 내 짝궁이 될 사람은?</p>
+    <br />
+    <a href="{% url 'result' %}"><button type="button">추첨하기</button></a>
+    <footer>
+      <hr />
+      <br />
+      <p>&copy; 2021 YUJIN. ALL RIGHTS RESERVED</p>
+    </footer>
+  </body>
+</html>

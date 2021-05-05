@@ -1,6 +1,85 @@
-<h2>Result</h2>
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <title>짝궁 뽑기</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        text-align: center;
+        background-color: rgb(255, 246, 196);
+        font-family: Jua;
+      }
+      h1 {
+        line-height: 1.5em;
+        font-size: 3.5em;
+        font-weight: 300;
+      }
+      #res {
+        font-size: 2.3em;
+        font-family: "Cute Font";
+      }
+      strong {
+        font-size: 2em;
+        font-family: "Cute Font";
+        color: rgb(255, 146, 5);
+      }
+      button {
+        font-size: 2em;
+        padding: 7px;
+        border: 4px solid rgb(253, 191, 21);
+        border-radius: 10px;
+        background-color: rgb(253, 191, 21);
+        color: white;
+      }
+      button:hover {
+        background-color: rgb(255, 166, 0);
+        border: 4px solid rgb(255, 166, 0);
+      }
+      img {
+        position: relative;
+        right: 30px;
+        top: 25px;
+      }
+      hr {
+        width: 90%;
+        height: 4px;
+        border: 0;
+        background-color: rgb(255, 255, 236);
+      }
+      footer {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="https://image.flaticon.com/icons/png/128/2829/2829661.png"
+        width="100"
+        height="100"
+      />뽑기 결과는!?
+    </h1>
 
-<p>숫자 추첨 결과 : {{num}}</p>
-<p>과일 추첨 결과 : {{fruits}}</p>
+    <p id="res">짝궁이 될 사람은 <strong>{{partner}}</strong> 입니다 👏</p>
 
-<a href="{% url 'home' %}"><button type="button">메인으로 돌아가기</button></a>
+    <a href="{% url 'home' %}"><button type="button">메인으로</button></a>
+    <footer>
+      <hr />
+      <br />
+      <p>&copy; 2021 YUJIN. ALL RIGHTS RESERVED</p>
+    </footer>
+  </body>
+</html>
